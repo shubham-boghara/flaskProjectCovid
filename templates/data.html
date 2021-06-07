@@ -1,0 +1,38 @@
+<table class="table table-hover">
+    <thead>
+    <tr>
+      <th scope="col">center_id</th>
+      <th scope="col">name</th>
+      <th scope="col">address</th>
+      <th scope="col">state_name</th>
+      <th scope="col">district_name</th>
+      <th scope="col">block_name</th>
+      <th scope="col">pincode</th>
+      <th scope="col">fee_type</th>
+      <th scope="col">available_capacity_dose1</th>
+      <th scope="col">available_capacity_dose2</th>
+      <th scope="col">available_capacity</th>
+      <th scope="col">min_age_limit</th>
+      <th scope="col">vaccine</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for item in data %}
+    <tr>
+      <th scope="row">{{ item['center_id'] }}</th>
+      <td>{{ item['name'] }}</td>
+      <td>{{ item['address'] }}</td>
+      <td>{{ item['state_name'] }}</td>
+      <td>{{ item['district_name'] }}</td>
+      <td>{{ item['block_name'] }}</td>
+      <td>{{ item['pincode'] }}</td>
+      <td>{{ item['fee_type'] }}</td>
+      <td>{{ item['available_capacity_dose1'] }}</td>
+      <td>{{ item['available_capacity_dose2'] }}</td>
+      <td style="color: red">{{ item['available_capacity'] }}</td>
+      <td>{{ item['min_age_limit'] }}</td>
+      <td>{{ item['vaccine'] }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
